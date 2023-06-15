@@ -4,3 +4,10 @@ GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 StippleLatex = "8706c442-30ce-4f68-b407-b81ebf148be9"
+
+[deps]
+DifferentialEquations = "7.8.0"
+GenieFramework = "1.19.0"
+ModelingToolkit = "8.59.1"
+Revise = "3.5.3"
+StippleLatex = "0.5.3"
