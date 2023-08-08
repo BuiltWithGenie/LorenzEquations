@@ -68,59 +68,6 @@ prob = define_ODE()
     end
 end
 
-function ui()
-    [
-        row([
-            cell(class="st-module", bignumber("Time", :t))
-            cell(
-                class="st-module",
-                [
-                    h6("End time")
-                    textfield("", :t_end)
-                ]
-            )
-            cell(
-                class="st-module",
-                [
-                    h6(latex"\sigma")
-                    slider(1:2:20, :σ; label=true)
-                ]
-            )
-            cell(
-                class="st-module",
-                [
-                    h6(latex"\rho")
-                    slider(10:2:40, :ρ; label=true)
-                ]
-            )
-            cell(
-                class="st-module",
-                [
-                    h6(latex"\beta")
-                    slider(1:2:20, :β; label=true)
-                ]
-            )
-            cell(
-                class="st-module",
-                [
-                    h6("Time step")
-                    slider(0:0.01:0.1, :t_step; label=true)
-                ]
-            )
-            button("Start!", @click("start = !start"))
-        ])
-        row([
-            cell(class="st-module", plot(:solplot))
-            cell(
-                class="st-module",
-                style="",
-                [
-                    cell(style="font-size:20px;text-align:center;padding-top:50px", latex" \text{\large Lorenz equations} \\ \dot{x}  = \sigma(y-x) \\ \dot{y}  = \rho x - y - xz \\ \dot{z}  = -\beta z + xy "display)
-                    cell(style="font-size:20px;padding-top:10px", "The Lorenz equations relate the properties of a two-dimensional fluid layer uniformly warmed from below and cooled from above. In particular, the equations describe the rate of change of three quantities with respect to time: $(latex("x")) is proportional to the rate of convection, $(latex("y")) to the horizontal temperature variation, and $(latex("z")) to the vertical temperature variation.")]
-            )
-        ])
-    ]
-end
 
 meta = Dict("og:title" => "Lorenz Chaotic Attractor", "og:description" => "Real-time simulation of a dynamic system with constant UI refresh.", "og:image" => "/preview.jpg")
 layout = DEFAULT_LAYOUT(meta=meta)
