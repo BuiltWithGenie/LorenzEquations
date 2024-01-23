@@ -10,7 +10,7 @@ StippleLatex = "8706c442-30ce-4f68-b407-b81ebf148be9"
 
 [compat]
 DifferentialEquations = "7.8.0"
-GenieFramework = "1.19.0"
+GenieFramework = "1.26.0"
 ModelingToolkit = "8.59.1"
 Revise = "3.5.3"
 StippleLatex = "0.5.3"
