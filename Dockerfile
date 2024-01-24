@@ -7,7 +7,7 @@ WORKDIR /home/genie/app
 RUN chown -R genie:genie /home/
 USER genie
 COPY . /home/genie/app
-RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); "
+RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile()"
 EXPOSE 8000
 EXPOSE 80
 ENV JULIA_DEPOT_PATH "/home/genie/.julia"

@@ -1,6 +1,6 @@
 name = "LorenzEquations"
 imgname = "lorenz"
-version = "0.0.0"
+version = "0.0.1"
 [deps]
 DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
 GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
