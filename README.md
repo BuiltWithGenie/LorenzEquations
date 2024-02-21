@@ -30,6 +30,3 @@ julia> up() # start server
 
 Open your browser and navigate to `http://localhost:8000/`
 
----
-
-Alternatively, register/login at <https://geniecloud.app> and import the app. You can then deploy it to the cloud.
